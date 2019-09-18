@@ -4,6 +4,7 @@ import {
   Layout,Menu,Breadcrumb,
   Row,Col
 } from "antd";
+import WrappedFormDetail from 'FormDetail'
 
 const {Header,Content,Footer} = Layout;
 
@@ -20,12 +21,7 @@ function FormPage() {
           <Breadcrumb.Item>Form</Breadcrumb.Item>
         </Breadcrumb>
         <div style={{background:'#fff',padding:24,minHeight:280}}>
-          <Row>
-            <Col span={8}>选择商品</Col>
-            <Col span={16}>
-
-            </Col>
-          </Row>
+            <WrappedFormDetail></WrappedFormDetail>
         </div>
       </Content>
       <Footer style={{textAlign:'center'}}>
