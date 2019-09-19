@@ -40,7 +40,7 @@ class FormDetail extends React.Component {
         const { getFieldDecorator } = this.props.form;
         const formItemLayout = {
             labelCol: { span: 6 },
-            wrapperCol: { span: 14 },
+            wrapperCol: { span: 8 },
         };
         const { TextArea } = Input;
         return (
@@ -48,7 +48,7 @@ class FormDetail extends React.Component {
 
                 <Form.Item label="选择商品" hasFeedback>
                     {getFieldDecorator('select', {
-                        rules: [{ required: true, message: 'Please select your country!' }],
+                        rules: [{ required: true, message: '请选择您要种草的商品！' }],
                     })(
                         <Select placeholder="请选择您要种草的商品">
                             <Option value="pen">长刀研</Option>
@@ -72,15 +72,22 @@ class FormDetail extends React.Component {
                 </Form.Item>
 
                 <Form.Item label='添加描述'>
-                    <TextArea
-                        placeholder="写下您对商品独到的测评吧"
-                        autosize={{ minRows: 3, maxRows: 10 }}
-                        style={{resize:'none'}}
-                    />
+                    {getFieldDecorator('textarea',{
+                        rules: [{required: true,message: '请写下您对商品独到的测评！'}]
+                    })(
+                        <TextArea
+                            placeholder="写下您对商品独到的测评吧"
+                            autosize={{ minRows: 10, maxRows: 10 }}
+                            style={{resize:'none'}}
+                        />
+                    )}
                 </Form.Item>
                 <Form.Item wrapperCol={{ span: 12, offset: 6 }}>
-                    <Button type="primary" htmlType="submit">
-                        Submit
+                    <Button type="primary" htmlType="submit" style={{margin:'0 10px 0 0'}}>
+                        提交
+                    </Button>
+                    <Button>
+                        取消
                     </Button>
                 </Form.Item>
 
