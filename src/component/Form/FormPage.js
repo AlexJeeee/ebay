@@ -19,14 +19,6 @@ const {Header,Content,Footer} = Layout;
 const { Option } = Select;
 
 class FormDetail extends React.Component {
-    state = {
-
-        textAreaValue: '',
-
-    };
-    onChange = ({ target: { textAreaValue } }) => {
-        this.setState({ textAreaValue });
-    };
     handleSubmit = e => {
         e.preventDefault();
         this.props.form.validateFields((err, values) => {
@@ -51,7 +43,6 @@ class FormDetail extends React.Component {
             wrapperCol: { span: 14 },
         };
         const { TextArea } = Input;
-        const { textAreaValue } = this.state.textAreaValue;
         return (
             <Form {...formItemLayout} onSubmit={this.handleSubmit}>
 
@@ -82,14 +73,11 @@ class FormDetail extends React.Component {
 
                 <Form.Item label='添加描述'>
                     <TextArea
-                        value={textAreaValue}
-                        onChange={this.onChange}
                         placeholder="写下您对商品独到的测评吧"
                         autosize={{ minRows: 3, maxRows: 10 }}
                         style={{resize:'none'}}
                     />
                 </Form.Item>
-
                 <Form.Item wrapperCol={{ span: 12, offset: 6 }}>
                     <Button type="primary" htmlType="submit">
                         Submit
