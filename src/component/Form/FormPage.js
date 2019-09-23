@@ -102,10 +102,6 @@ const WrappedFormDetail = Form.create({ name: 'validate_other' })(FormDetail);
 function FormPage() {
   return (
     <Layout>
-      <Header>
-
-      </Header>
-      <Content style={{padding:'0 50px'}}>
         <Breadcrumb style={{margin:'16px 0'}}>
           <Breadcrumb.Item>Home</Breadcrumb.Item>
           <Breadcrumb.Item>Form</Breadcrumb.Item>
@@ -114,10 +110,6 @@ function FormPage() {
             <PageHeader onBack={() => null} title="新种草" subTitle="撰写我自己的种草" />
             <WrappedFormDetail />
         </div>
-      </Content>
-      <Footer style={{textAlign:'center'}}>
-        copyright 2019 ^^
-      </Footer>
     </Layout>
   );
 }
