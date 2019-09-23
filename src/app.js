@@ -12,10 +12,11 @@ export default  class App extends React.Component {
     render() {
         return (
             <div className="App">
-                <Header>
-                头部~
+                <Header style={{'background':'#FFF','textAlign': 'center'}}>
+                    <img src={require('./pictures/ebaylogo.png')} height='64px'/>
+                    <img src={require('./pictures/header.png')}/>
                 </Header>
-                <Content style={{padding:'0 50px'}}>
+                <Content style={{padding:'0 50px','background':'#FFF'}}>
                     <Switch>
                         {
                             routes.map(route => {
@@ -36,7 +37,8 @@ export default  class App extends React.Component {
                     </Switch>
                 </Content>
                 <Footer style={{textAlign:'center'}}>
-                    copyright 2019 ^^
+                    eBay 校园 Hackathon<br/>
+                    author AlexJee / Vine
                 </Footer>
             </div>
         );
