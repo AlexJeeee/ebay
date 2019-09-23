@@ -13,6 +13,7 @@ import {
     Rate,
     PageHeader,
 } from "antd";
+import {Link} from 'react-router-dom'
 //import WrappedFormDetail from 'FormDetail'
 
 const {Header,Content,Footer} = Layout;
@@ -103,11 +104,11 @@ function FormPage() {
   return (
     <Layout>
         <Breadcrumb style={{margin:'16px 0'}}>
-          <Breadcrumb.Item>Home</Breadcrumb.Item>
+            <Link to="/"><Breadcrumb.Item>Home</Breadcrumb.Item></Link>
           <Breadcrumb.Item>Form</Breadcrumb.Item>
         </Breadcrumb>
         <div style={{background:'#fff',padding:24,minHeight:600}}>
-            <PageHeader onBack={() => null} title="新种草" subTitle="撰写我自己的种草" />
+            <PageHeader title="新种草" subTitle="撰写我自己的种草" />
             <WrappedFormDetail />
         </div>
     </Layout>
