@@ -13,13 +13,26 @@ import {
     Rate,
     PageHeader,
 } from "antd";
+import {Link} from "react-router-dom";
 
 
 function DetailPage() {
     return (
-        <Layout>
-            <div>DETAIL</div>
-        </Layout>
+        <div>
+            <Breadcrumb style={{margin:'16px 0'}}>
+                <Link to="/">
+                    <Breadcrumb.Item>
+                        <Icon type="home" />
+                        <span>   Home</span>
+                    </Breadcrumb.Item>
+                </Link>
+                <Breadcrumb.Item>Details</Breadcrumb.Item>
+            </Breadcrumb>
+            <Row gutter={16}>
+                <Col span={10} offset={2}></Col>
+                <Col span={10} ></Col>
+            </Row>
+        </div>
     );
 }
 

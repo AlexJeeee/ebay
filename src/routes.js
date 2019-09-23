@@ -9,11 +9,11 @@ const routes = [{
     path: '/form',
     component: FormPage
 },{
+    path:'/details',
+    component: DetailPage
+},{
     path:'/',
     component: HomePage
-},{
-    path:'detail',
-    component: DetailPage
 }
 ];
 export default routes

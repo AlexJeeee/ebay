@@ -22,24 +22,26 @@ function HomePage() {
                             <div className="textTip">前一店铺</div>
                         </Col>
                         <Col span={5}>
-                            <Card
-                                cover={
-                                    <img
-                                        alt="penink"
-                                        src={require('../../pictures/penink.jpg')}
+                            <Link to='/details'>
+                                <Card
+                                    cover={
+                                        <img
+                                            alt="penink"
+                                            src={require('../../pictures/penink.jpg')}
+                                        />
+                                    }
+                                    actions={[
+                                        <div><img src={require('../../pictures/seed.png')} height='18px'/><span> 种草</span></div>,
+                                        <div><Icon type="ellipsis" key="ellipsis" /><span> 查看评论</span></div>,
+                                        <div><Icon type="edit" key="edit" /><span> 写评论</span></div>,
+                                    ]}
+                                >
+                                    <Meta
+                                        title="Pilot 钢笔墨水24色  US $18.93"
+                                        description="This is very very very very very very very very very very very very beautiful!"
                                     />
-                                }
-                                actions={[
-                                    <div><img src={require('../../pictures/seed.png')} height='18px'/><span> 种草</span></div>,
-                                    <div><Icon type="ellipsis" key="ellipsis" /><span> 查看评论</span></div>,
-                                    <div><Icon type="edit" key="edit" /><span> 写评论</span></div>,
-                                ]}
-                            >
-                                <Meta
-                                    title="Pilot 钢笔墨水24色  US $18.93"
-                                    description="This is very very very very very very very very very very very very beautiful!"
-                                />
-                            </Card>
+                                </Card>
+                            </Link>
                         </Col>
                         <Col span={5}>
                             <Card
