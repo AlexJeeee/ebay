@@ -14,7 +14,6 @@ import {
     PageHeader,
 } from "antd";
 import {Link} from 'react-router-dom'
-//import WrappedFormDetail from 'FormDetail'
 
 const {Header,Content,Footer} = Layout;
 const { Option } = Select;

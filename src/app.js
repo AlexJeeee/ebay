@@ -13,8 +13,8 @@ export default  class App extends React.Component {
         return (
             <div className="App">
                 <Header style={{'background':'#FFF','textAlign': 'center','padding':'0'}}>
-                    <img src={require('./pictures/ebaylogo.png')} height='64px' style={{'display':'inline-block'}}/>
-                    <img src={require('./pictures/header.png')} style={{'display':'inline-block'}}/>
+                    <img src={require('./pictures/ebaylogo.png')} height='64px'/>
+                    <img src={require('./pictures/header.png')}/>
                 </Header>
                 <Content style={{padding:'0 50px','background':'#FFF'}}>
                     <Switch>
